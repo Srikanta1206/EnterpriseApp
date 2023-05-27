@@ -7,7 +7,7 @@ import com.ni.spring.setter.WishMessageGenerator;
 public class ClientApp {
 
 	public static void main(String[] args) {
-		//locate and hold file .Internak uses java.io.File
+		//locate and hold file .Internal uses java.io.File
 		/*FileSystemResource frs=new FileSystemResource("src/main/java/com/ni/cfg/file/ApplicationContext.xml");
 		//Create spring Container(IOC Container)
 		XmlBeanFactory factory=new XmlBeanFactory(frs);
@@ -21,7 +21,7 @@ public class ClientApp {
 											new FileSystemXmlApplicationContext("src/main/java/com/ni/cfg/file/ApplicationContext.xml");
 			WishMessageGenerator message=(WishMessageGenerator)container.getBean("wmg");
 			String res=message.wishMessage("Srikanta Sabata");
-			System.out.println(res);
+			System.out.println(res)
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -6,9 +6,9 @@ public class WishMessageGenerator {
 		System.out.println("0-param Constructor");
 	}
 	
-	public void setDate(Date date) {
+	public void setDate(Date dateobj) {
 		System.out.println("setter injection");
-		this.date=date;
+		this.date=dateobj;
 	}
 	
 	public String wishMessage(String name) {
