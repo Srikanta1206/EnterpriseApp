@@ -1,13 +1,7 @@
 package com.ni.client_app;
 
 
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
-
-import com.ni.spring.setter.WishMessageGenerator;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class ClientApp {
 
 	public static void main(String[] args) {
@@ -29,10 +23,13 @@ public class ClientApp {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}*/
-		DefaultListableBeanFactory factory=new DefaultListableBeanFactory();
-		XmlBeanDefinitionReader reader=new XmlBeanDefinitionReader(factory);
-		reader.loadBeanDefinitions("com/ni/cfg1/ApplicationContext.xml");
-		WishMessageGenerator wmg1=factory.getBean("wmg", WishMessageGenerator.class);
-		System.out.println(wmg1.wishMessage("Srikanta Kumar Sabata"));
+//		DefaultListableBeanFactory factory=new DefaultListableBeanFactory();
+//		XmlBeanDefinitionReader reader=new XmlBeanDefinitionReader(factory);
+//		System.out.println("hello");
+//		reader.loadBeanDefinitions("com/ni/cfg1/ApplicationContext.xml");
+//		WishMessageGenerator wmg1=factory.getBean("wmg", WishMessageGenerator.class);
+//		System.out.println(wmg1.wishMessage("Srikanta Kumar Sabata"));
+		ClassPathXmlApplicationContext Class=new ClassPathXmlApplicationContext("com/ni/cfg1/ApplicationContext.xml");//ApplicationContext Container
+		
 	}
 }

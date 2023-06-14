@@ -5,10 +5,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-	<bean id="dt" class="java.util.Date"/>
-	
-	<bean id="wmg" class="com.ni.spring.setter.WishMessageGenerator" scope="prototype" >
-		<property name="date" ref="dt"/>
+	<bean id="de" class="com.ni.dependent.DieselEngine"/>
+	<bean id="pe" class="com.ni.dependent.PetrolEngine"/>
+	<bean id="cng" class="com.ni.dependent.CNGEnigine"/>
+	<!-- Target Class -->
+	<bean id="v" class="com.ni.target.Vehicle">
+		<property name="engine" ref="de"/>
 	</bean>
 	
 </beans>

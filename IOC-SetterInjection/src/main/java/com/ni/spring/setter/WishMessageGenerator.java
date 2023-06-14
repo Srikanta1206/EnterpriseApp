@@ -7,6 +7,7 @@ public class WishMessageGenerator {
 	}
 	
 	public void setDate(Date dateobj) {
+		//System.out.println("Setter Injection");
 		System.out.println("setter injection");
 		this.date=dateobj;
 	}
